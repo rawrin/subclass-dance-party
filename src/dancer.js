@@ -16,6 +16,13 @@ Dancer.prototype.setPosition = function(top, left){
   this.$node.css(styleSettings);
 };
 
+Dancer.prototype.lineUp = function(){
+  var styleSettings = {
+    left: 0
+  };
+  this.$node.css(styleSettings);
+};
+
 Dancer.prototype.step = function(){
   var that = this;
   setTimeout(function() {
