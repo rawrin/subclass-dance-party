@@ -1,7 +1,9 @@
 
 var Dancer = function(top, left, timeBetweenSteps){
   this._timeBetweenSteps = timeBetweenSteps;
-  this.$node = $('<span class="dancer"></span>');
+  if (this.$node === null) {
+    this.$node = $('<span class="dancer"></span>');
+  }
   this.step();
   this.setPosition(top, left);
 };

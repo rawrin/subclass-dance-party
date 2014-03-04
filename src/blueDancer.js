@@ -1,6 +1,6 @@
 var BlueDancer = function(top, left, timeBetweenSteps){
+	this.$node = $('<span class="blueDancer"></span>');
   Dancer.call(this, top, left, timeBetweenSteps);
-  // this.$node = $('<span class="dancer"></span>');
 };
 
 BlueDancer.prototype = Object.create(Dancer.prototype);
