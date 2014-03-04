@@ -1,16 +1,12 @@
 var BlinkyDancer = function(top, left, timeBetweenSteps){
-  this.oldStep = this.step;
   Dancer.call(this, top, left, timeBetweenSteps);
-};
-
-BlinkyDancer.prototype.step = function(){
-  oldStep();
-  blinkyDancer.$node.toggle();
+  // this.$node = $('<span class="dancer"></span>');
 };
 
 BlinkyDancer.prototype = Object.create(Dancer.prototype);
 BlinkyDancer.prototype.constructor = BlinkyDancer;
 
-/*sinon.spy(blinkyDancer.$node, 'toggle');
-blinkyDancer.step();
-expect(blinkyDancer.$node.toggle.called).to.be.true;*/
+BlinkyDancer.prototype.step = function(){
+  Dancer.prototype.step.call(this);
+  this.$node.toggle();
+};
